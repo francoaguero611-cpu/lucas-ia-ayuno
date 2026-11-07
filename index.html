@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lucas IA · Tu nutricionista 24/7</title>
+<meta name="description" content="Lucas IA: tu nutricionista con inteligencia artificial de Ayuno 2.0, a cualquier hora durante 90 días.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#5e30cc">
+<meta name="apple-mobile-web-app-title" content="Lucas IA">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="lucas.jpg">
+<link rel="icon" href="lucas.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="estilos.css?v=1">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="marca">
+    <div class="avatar" id="avatar">
+      <img src="lucas.jpg" alt="" onerror="this.remove()">
+      <span class="iniciales">LM</span>
+    </div>
+    <div class="marca-texto">
+      <h1>Lucas IA</h1>
+      <p>Tu nutricionista 24/7 · Ayuno 2.0</p>
+    </div>
+  </div>
+  <div class="acciones">
+    <div class="contador" id="contador" aria-live="polite"></div>
+    <button type="button" class="nuevo" id="nuevo" hidden>Charla nueva</button>
+  </div>
+</header>
+
+<main class="hilo" id="hilo" role="log" aria-live="polite" aria-label="Conversación">
+
+  <section class="bienvenida" id="bienvenida">
+    <div class="avatar avatar-grande" aria-hidden="true">
+      <img src="lucas.jpg" alt="" onerror="this.remove()">
+      <span class="iniciales">LM</span>
+    </div>
+    <p class="sello">AYUNO 2.0 CONSULTORIO</p>
+    <h2>¡Hola! Soy Lucas IA, tu nutricionista.</h2>
+    <p class="bajada">
+      Te digo qué protocolo te conviene esta semana, a qué hora abrir y cerrar tu ventana
+      y qué hacer cuando la balanza se clava. Para empezar, contame tu edad, tu horario,
+      qué protocolo te dio el test, qué remedios tomás y cómo te fue esta semana.
+    </p>
+    <button type="button" class="seguir-ficha" id="seguir-ficha" hidden>
+      <strong>Seguir donde quedamos</strong>
+      <span id="ficha-vista"></span>
+    </button>
+    <div class="sugerencias">
+      <button class="sugerencia" type="button">Arranco hoy. Tengo 61 años, ceno a las 20:30 y el test me dio El Despertar. Tomo un remedio para la presión. ¿Cómo empiezo?</button>
+      <button class="sugerencia" type="button">Hace 10 días que la balanza no se mueve. ¿Qué hago?</button>
+      <button class="sugerencia" type="button">El sábado tengo un cumpleaños y el domingo asado. ¿Cómo acomodo mi ventana?</button>
+      <button class="sugerencia" type="button">Tomo la pastilla de la tiroides a la mañana. ¿Cómo hago con el ayuno?</button>
+    </div>
+  </section>
+
+</main>
+
+<div class="pie">
+  <div class="adjunto" id="adjunto" hidden>
+    <img id="adjunto-img" alt="Foto para mandar">
+    <button type="button" id="quitar-foto" aria-label="Sacar la foto">×</button>
+  </div>
+  <form class="compositor" id="compositor">
+    <button type="button" id="foto" class="boton-foto" aria-label="Agregar una foto">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+        <path d="M4 8h3l2-2.5h6L17 8h3v11H4z" fill="none" stroke="currentColor"
+              stroke-width="1.9" stroke-linejoin="round"/>
+        <circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="1.9"/>
+      </svg>
+    </button>
+    <input type="file" id="archivo" accept="image/*" hidden>
+    <textarea id="entrada" rows="1" placeholder="Escribile a Lucas…"
+              enterkeyhint="send" autocomplete="off"
+              aria-label="Escribile a Lucas"></textarea>
+    <button type="submit" id="enviar" aria-label="Mandar">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path d="M12 20V5M5 12l7-7 7 7" fill="none" stroke="currentColor"
+              stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </form>
+  <p class="aviso">
+    Asistente con inteligencia artificial. Puede equivocarse y no reemplaza a tu médico:
+    no cambies ni dejes ningún remedio sin hablarlo con él. Si te sentís mal, cortá el ayuno y consultá.
+  </p>
+</div>
+
+<script src="app.js?v=1"></script>
+</body>
+</html>
